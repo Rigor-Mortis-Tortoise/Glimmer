@@ -1,33 +1,44 @@
 <head>
-    <link rel="stylesheet" href="CSS/drag.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/modal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <script src="JS/drag.js"></script>
 </head>
+<body>
 
+<div class="navigation">
+    <h1>Glimmer</h1>
+    <!-- <button onclick="openModal()">Add Note</button> -->
 
-<h1>Glimmer</h1>
-<!-- Add Note Button -->
-<button onclick="openModal()">Add Note</button>
+</div>
+<button onclick="openModal()" class="add-note">+</button>
+
 
 <!-- Add Note with Modal -->
 <div id="noteModal" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Add a New Note</h2>
-    <label for="noteTitle">Title:</label>
-    <input type="text" id="noteTitle">
-    <label for="noteBody">Description:</label>
-    <textarea id="noteBody"></textarea>
-    <label for="noteColor">Color:</label>
+    <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+    <input type="text" id="noteTitle" placeholder="Add Title" class="title">
+    <textarea id="noteBody" class="description" placeholder="Hopes, dreams, ideas, recipes, etc..."></textarea>
 <div id="noteColor">
-  <input type="radio" id="color1" name="noteColor" value="color1">
-  <label for="color1">Yellow</label>
+  <input type="radio" id="color1" name="noteColor" value="color1" checked>
+  <label for="color1"></label>
   <input type="radio" id="color2" name="noteColor" value="color2">
-  <label for="color2">Red</label>
+  <label for="color2"></label>
   <input type="radio" id="color3" name="noteColor" value="color3">
-  <label for="color3">Blue</label>
+  <label for="color3"></label>
+  <input type="radio" id="color4" name="noteColor" value="color4">
+  <label for="color4"></label>
+  <input type="radio" id="color5" name="noteColor" value="color5">
+  <label for="color5"></label>
+  <input type="radio" id="color6" name="noteColor" value="color6">
+  <label for="color6"></label>
 </div>
-    <button onclick="submitNote()">Add Note</button>
+    <button onclick="submitNote()" class="submit-note">Add Glimmer</button>
   </div>
 </div>
 
@@ -41,3 +52,4 @@
 <script  src="JS/drag.js"></script>
 
 
+</body>

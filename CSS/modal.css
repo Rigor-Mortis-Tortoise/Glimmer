@@ -1,0 +1,176 @@
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #F6DE9F;
+    display: flex;
+    flex-direction: column;
+    margin: 15% auto;
+    padding: 20px;
+    width: 600px;
+    border-radius: 10px;
+  
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  /* Form Styling */
+  input,
+  textarea {
+      color: #7C5900;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-family: sans-serif;
+      background-color: #F6DE9F;
+  }
+
+
+  input::placeholder,
+  textarea::placeholder {
+      color: #9B8244;
+      font-style: normal;
+      background-color: #F6DE9F;
+  }
+
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: 18px;
+    font-weight: 500;
+    height: 250px;
+
+  }
+
+/* Hide the default radio buttons */
+input[type="radio"] {
+    display: none;
+  }
+  
+  /* Style for custom radio buttons using ::before */
+  input[type="radio"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Colors for the custom radio buttons */
+  #color1 + label::before {
+    background-color: #C90; /* Yellow */
+  }
+  
+  #color2 + label::before {
+    background-color: #C09; /* Red */
+  }
+  
+  #color3 + label::before {
+    background-color: green; /* Blue */
+  }
+
+  #color4 + label::before {
+    background-color: #0F535C; /* Blue */
+  }
+  #color5 + label::before {
+    background-color: #D6A171; /* Blue */
+  }
+  #color6 + label::before {
+    background-color: #C3A4D7; /* Blue */
+  }
+  
+  /* Style for selected radio buttons */
+  input[type="radio"]:checked + label::before {
+    border: 2px solid #000;
+  }
+  
+  .color1 {
+    background-color: #DEBF6E;
+    color: #7C5A00;
+  }
+
+  .color2 {
+    background-color: #F1A89E;
+    color: #890000;
+  }
+
+  .color3 {
+    background-color: #ADCE78;
+    color: #52630D;
+  }
+
+  .color4 {
+    background-color: #97C8C2;
+    color: #0F535C;
+  }
+
+  .color5 {
+    background-color: #D6A171;
+    color: #803D00;
+  }
+
+  .color6 {
+    background-color: #C3A4D7;
+    color: #450070;
+  }
+
+  #color1:checked + label::before {
+    border: 2px solid #7C5A00;
+  }
+
+  #color2:checked + label::before {
+    border: 2px solid #890000;
+  }
+  #color3:checked + label::before {
+    border: 2px solid #52630D;
+  }
+  #color4:checked + label::before {
+    border: 2px solid #0F535C;
+  }
+  #color5:checked + label::before {
+    border: 2px solid #803D00;
+  }
+  #color6:checked + label::before {
+    border: 2px solid #450070;
+  }
+
+
+.submit-note {
+    height: 56px;
+    background-color: #DAB149;
+    color: #7C5900;
+    font-size: 20px;
+    font-weight: 700;
+    border:none;
+    border-radius: 10px;
+    margin-top: 12px;
+}

@@ -1,0 +1,137 @@
+* { box-sizing: border-box; } 
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background: #FFEEDF;
+}
+
+h1 {
+  color: #282828;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  max-width: 1500px;
+  margin: auto;
+ 
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 250px;
+  height: auto;
+  min-height: 48px;
+  max-height: 350px;
+  background: #DEBF6E;
+  color: #7C5A00;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+
+  p {
+    white-space: pre-wrap;
+  }
+}
+
+.grid-item:hover {
+  border-color: hsla(0, 0%, 100%, 0.5);
+  cursor: move;
+}
+
+.grid-item.is-dragging,
+.grid-item.is-positioning-post-drag {
+  z-index: 2;
+  opacity: 1;
+}
+
+.packery-drop-placeholder {
+  outline: 3px dashed hsla(0, 0%, 0%, 0.5);
+  outline-offset: -6px;
+  border-radius: 10px;
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.add-note {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  content: '+';
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  font-size: 3em;
+  background-color: #DEBF6E;
+  color: #7C5A00;
+  font-weight: 800;
+  border: none;
+  transition-timing-function: ease-in-out;
+  transition-duration: .3s;
+}
+
+.add-note:hover {
+  opacity: .7;
+}
+
+
+  /* Add styles for the delete button */
+  .delete-button {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+  }
+  
+  .edit-button {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .grid-item:hover {
+    opacity: .8;
+  }
+
+  .grid-item:hover .delete-button, .grid-item:hover .edit-button {
+    display: block;
+    
+  }

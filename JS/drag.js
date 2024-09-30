@@ -1,6 +1,5 @@
 // external js: packery.pkgd.js, draggabilly.pkgd.js
 
-
 var pckry = new Packery( '.grid', {
     itemSelector: '.grid-item',
     columnWidth: 250,
@@ -22,12 +21,20 @@ function closeModal() {
   document.getElementById('noteModal').style.display = 'none';
 }
 
+// Function to close the modal if clicked outside
+window.onclick = function(event) {
+  var modal = document.getElementById('noteModal');
+  if (event.target == modal) {
+    closeModal();
+  }
+}
 
 // Function to submit the note
 function submitNote() {
   var title = document.getElementById('noteTitle').value;
   var body = document.getElementById('noteBody').value;
   var color = document.querySelector('input[name="noteColor"]:checked').value;
+  console.log(document.querySelector('input[name="noteColor"]:checked').value);
   addItem(title, body, color);
   closeModal();
 }
@@ -53,9 +60,17 @@ function addItem(title, body, colorClass) {
     saveNotes();
   };
 
+  var editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
+  editButton.classList.add('edit-button');
+  editButton.onclick = function() {
+    console.log("Edit");
+  };
+
   newItem.appendChild(newTitle);
   newItem.appendChild(newBody);
   newItem.appendChild(deleteButton);
+  newItem.appendChild(editButton);
 
   var grid = document.querySelector('.grid');
   grid.appendChild(newItem);
@@ -86,7 +101,6 @@ function loadNotes() {
       addItem(note.title, note.body, note.colorClass);
   });
 }
-
 
 
 // Load notes when the page loads
