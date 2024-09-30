@@ -1,0 +1,43 @@
+<head>
+    <link rel="stylesheet" href="CSS/drag.css">
+
+    <script src="JS/drag.js"></script>
+</head>
+
+
+<h1>Glimmer</h1>
+<!-- Add Note Button -->
+<button onclick="openModal()">Add Note</button>
+
+<!-- Modal Structure -->
+<div id="noteModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Add a New Note</h2>
+    <label for="noteTitle">Title:</label>
+    <input type="text" id="noteTitle">
+    <label for="noteBody">Description:</label>
+    <textarea id="noteBody"></textarea>
+    <label for="noteColor">Color:</label>
+<div id="noteColor">
+  <input type="radio" id="color1" name="noteColor" value="color1">
+  <label for="color1">Yellow</label>
+  <input type="radio" id="color2" name="noteColor" value="color2">
+  <label for="color2">Red</label>
+  <input type="radio" id="color3" name="noteColor" value="color3">
+  <label for="color3">Blue</label>
+</div>
+    <button onclick="submitNote()">Add Note</button>
+  </div>
+</div>
+
+
+<div class="grid">
+
+</div>
+
+<script src='https://unpkg.com/packery@2/dist/packery.pkgd.js'></script>
+<script src='https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.js'></script>
+<script  src="JS/drag.js"></script>
+
+
